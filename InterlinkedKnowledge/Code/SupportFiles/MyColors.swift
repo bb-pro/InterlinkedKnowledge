@@ -30,7 +30,7 @@ enum MyColors: Int, CaseIterable {
     case black = 0x000000
     case lightBlue = 0x99DDFF
     case white = 0xFFFFFF
-    case tint = 0xEE5916
+    case tint = 0xFE9257
     case secondary = 0xF7AC8B
     case blue = 0x019AE6
     case background = 0xFFA14A
@@ -39,6 +39,8 @@ enum MyColors: Int, CaseIterable {
     case secondaryText = 0xAEAEAE
     case green = 0x39D036
     case tab = 0x000001
+    case darkGray = 0x1E1E1E
+    case bgSecond = 0xFFEFE7
     
     var color: UIColor {
         

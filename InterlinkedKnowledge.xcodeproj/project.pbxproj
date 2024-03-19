@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		801E1F232BAA21AA0081ECAB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F222BAA21AA0081ECAB /* OnboardingView.swift */; };
 		801E1F252BAA2CEA0081ECAB /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F242BAA2CEA0081ECAB /* OnboardingVC.swift */; };
+		801E1F282BAA3B240081ECAB /* HolidaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F272BAA3B240081ECAB /* HolidaysVC.swift */; };
+		801E1F2A2BAA3B2B0081ECAB /* HolidaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F292BAA3B2B0081ECAB /* HolidaysView.swift */; };
+		801E1F2D2BAA3BC30081ECAB /* TotalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F2C2BAA3BC30081ECAB /* TotalInfoView.swift */; };
+		801E1F302BAA4CBC0081ECAB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F2F2BAA4CBC0081ECAB /* SettingsVC.swift */; };
+		801E1F322BAA4CCC0081ECAB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F312BAA4CCC0081ECAB /* SettingsView.swift */; };
+		801E1F352BAA4CFD0081ECAB /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F342BAA4CFD0081ECAB /* SettingsButtonView.swift */; };
 		809904522BA983480010334C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809904512BA983480010334C /* AppDelegate.swift */; };
 		809904542BA983480010334C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809904532BA983480010334C /* SceneDelegate.swift */; };
 		8099045C2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8099045A2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld */; };
@@ -46,6 +52,12 @@
 /* Begin PBXFileReference section */
 		801E1F222BAA21AA0081ECAB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		801E1F242BAA2CEA0081ECAB /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		801E1F272BAA3B240081ECAB /* HolidaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysVC.swift; sourceTree = "<group>"; };
+		801E1F292BAA3B2B0081ECAB /* HolidaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysView.swift; sourceTree = "<group>"; };
+		801E1F2C2BAA3BC30081ECAB /* TotalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoView.swift; sourceTree = "<group>"; };
+		801E1F2F2BAA4CBC0081ECAB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		801E1F312BAA4CCC0081ECAB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		801E1F342BAA4CFD0081ECAB /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
 		8099044E2BA983480010334C /* InterlinkedKnowledge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterlinkedKnowledge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809904512BA983480010334C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809904532BA983480010334C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +92,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		801E1F262BAA3B140081ECAB /* Holidays */ = {
+			isa = PBXGroup;
+			children = (
+				801E1F2B2BAA3BA60081ECAB /* TotalInfoView */,
+				801E1F272BAA3B240081ECAB /* HolidaysVC.swift */,
+				801E1F292BAA3B2B0081ECAB /* HolidaysView.swift */,
+			);
+			path = Holidays;
+			sourceTree = "<group>";
+		};
+		801E1F2B2BAA3BA60081ECAB /* TotalInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				801E1F2C2BAA3BC30081ECAB /* TotalInfoView.swift */,
+			);
+			path = TotalInfoView;
+			sourceTree = "<group>";
+		};
+		801E1F2E2BAA4C790081ECAB /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				801E1F332BAA4CE00081ECAB /* SettingsButton */,
+				801E1F2F2BAA4CBC0081ECAB /* SettingsVC.swift */,
+				801E1F312BAA4CCC0081ECAB /* SettingsView.swift */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		801E1F332BAA4CE00081ECAB /* SettingsButton */ = {
+			isa = PBXGroup;
+			children = (
+				801E1F342BAA4CFD0081ECAB /* SettingsButtonView.swift */,
+			);
+			path = SettingsButton;
+			sourceTree = "<group>";
+		};
 		809904452BA983480010334C = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +188,8 @@
 		809904712BA9A3A20010334C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				809904722BA9A3A20010334C /* BaseViewController.swift */,
 				809904732BA9A3A20010334C /* CustomViews */,
+				809904722BA9A3A20010334C /* BaseViewController.swift */,
 				809904782BA9A3A20010334C /* Double + Extension .swift */,
 				809904792BA9A3A30010334C /* MyColors.swift */,
 				8099047A2BA9A3A30010334C /* Date + Extension.swift */,
@@ -174,8 +222,10 @@
 		8099048E2BA9A4430010334C /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				8099046C2BA9A39D0010334C /* Onboarding */,
 				809904692BA9A3960010334C /* Splash */,
+				8099046C2BA9A39D0010334C /* Onboarding */,
+				801E1F262BAA3B140081ECAB /* Holidays */,
+				801E1F2E2BAA4C790081ECAB /* SettingsVC */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -258,19 +308,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				8099047E2BA9A3C00010334C /* BaseViewController.swift in Sources */,
+				801E1F322BAA4CCC0081ECAB /* SettingsView.swift in Sources */,
+				801E1F2A2BAA3B2B0081ECAB /* HolidaysView.swift in Sources */,
 				801E1F252BAA2CEA0081ECAB /* OnboardingVC.swift in Sources */,
 				809904842BA9A3CB0010334C /* CustomPageControlView.swift in Sources */,
 				809904812BA9A3C50010334C /* MyColors.swift in Sources */,
 				809904802BA9A3C50010334C /* Font + Extention.swift in Sources */,
 				809904832BA9A3C50010334C /* TabBarController.swift in Sources */,
+				801E1F282BAA3B240081ECAB /* HolidaysVC.swift in Sources */,
 				8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */,
 				809904882BA9A3DC0010334C /* OnboardingData.swift in Sources */,
+				801E1F2D2BAA3BC30081ECAB /* TotalInfoView.swift in Sources */,
+				801E1F302BAA4CBC0081ECAB /* SettingsVC.swift in Sources */,
 				809904522BA983480010334C /* AppDelegate.swift in Sources */,
 				809904872BA9A3CB0010334C /* CustomButtonView.swift in Sources */,
 				809904862BA9A3CB0010334C /* ProfileButtonView.swift in Sources */,
 				8099045C2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld in Sources */,
 				809904542BA983480010334C /* SceneDelegate.swift in Sources */,
 				809904822BA9A3C50010334C /* Double + Extension .swift in Sources */,
+				801E1F352BAA4CFD0081ECAB /* SettingsButtonView.swift in Sources */,
 				8099047F2BA9A3C50010334C /* Date + Extension.swift in Sources */,
 				8099048D2BA9A3E10010334C /* SplashView.swift in Sources */,
 				801E1F232BAA21AA0081ECAB /* OnboardingView.swift in Sources */,

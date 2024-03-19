@@ -21,11 +21,13 @@ extension UIFont {
         switch font {
         case .bold:
             return UIFont.systemFont(ofSize: size, weight: .bold)
-        default:
-            guard let customFont = UIFont(name: font.rawValue, size: size) else {
-                return UIFont.systemFont(ofSize: size)
+        case .semibold:
+            if let customFont = UIFont(name: font.rawValue, size: size) {
+                return customFont
+            } else {
+                return UIFont.systemFont(ofSize: size, weight: .semibold)
             }
-            return customFont
         }
     }
+
 }

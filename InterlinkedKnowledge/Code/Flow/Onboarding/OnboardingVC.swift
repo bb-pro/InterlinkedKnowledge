@@ -18,7 +18,7 @@ final class OnboardingVC: BaseViewController {
     
     override func loadView() {
         view = OnboardingView()
-        contentView.updateUI(data: onboardingData[currentIndex])
+        nextPressed()
         contentView.nextButton.actionButton(target: self, action: #selector(nextPressed))
     }
     
@@ -26,9 +26,13 @@ final class OnboardingVC: BaseViewController {
     
     @objc func nextPressed() {
         if currentIndex < onboardingData.count {
-            print(onboardingData[currentIndex])
-            currentIndex += 1
             contentView.updateUI(data: onboardingData[currentIndex])
+            currentIndex += 1
+
+        } else {
+            let tabBarVC = TabBarController()
+            tabBarVC.modalPresentationStyle = .fullScreen
+            present(tabBarVC, animated: true)
         }
     }
 }

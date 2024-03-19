@@ -37,24 +37,21 @@ final class TabBarController: UITabBarController {
     }
 
     func pushVC() {
-    
-//        let workoutVC = WorkoutsVC()
-//        workoutVC.tabBarItem.title = "Workout"
-//        workoutVC.tabBarItem.image = .tabIcon1
-//        let workoutsVCC = UINavigationController(rootViewController: workoutVC)
-//        
-//        let statisticsVC = StatsVC()
-//        statisticsVC.tabBarItem.title = "Statistics"
-//        statisticsVC.tabBarItem.image = .tabIcon2
-//        
-//        let notesVC = NotesVC()
-//        notesVC.tabBarItem.title = "Notes"
-//        notesVC.tabBarItem.image = .tabIcon3
-//        
-//        let postsVC = PostsVC()
-//        postsVC.tabBarItem.title = "Posts"
-//        postsVC.tabBarItem.image = .tabIcon4
-//        
-        self.viewControllers = []
+        let holidaysVC = HolidaysVC()
+        holidaysVC.tabBarItem.title = "Holidays"
+        holidaysVC.tabBarItem.image = .tabIcon1
+        let holidaysVCC = UINavigationController(rootViewController: holidaysVC)
+        
+        let calculationsVC = BaseViewController()
+        calculationsVC.tabBarItem.title = "Calculations"
+        calculationsVC.tabBarItem.image = .tabIcon2
+        let calculationsVCC = UINavigationController(rootViewController: calculationsVC)
+        
+        let settingsVC = SettingsVC()
+        settingsVC.tabBarItem.title = "Settings"
+        settingsVC.tabBarItem.image = .tabIcon3
+        let settingsVCC = UINavigationController(rootViewController: settingsVC)
+        
+        self.viewControllers = [holidaysVCC, calculationsVCC, settingsVCC]
     }
 }
