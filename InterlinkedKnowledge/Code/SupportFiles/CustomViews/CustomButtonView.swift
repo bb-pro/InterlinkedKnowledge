@@ -42,7 +42,7 @@ final class CustomButtonView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .customSFFont(.regular, size: 20)
+        label.font = .customSFProFont(.bold, size: 14)
         label.textColor = MyColors.white.color
         label.textAlignment = .center
         return label

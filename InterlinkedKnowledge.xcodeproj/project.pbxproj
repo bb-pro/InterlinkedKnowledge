@@ -17,6 +17,12 @@
 		801E1F352BAA4CFD0081ECAB /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F342BAA4CFD0081ECAB /* SettingsButtonView.swift */; };
 		8090166E2BAE173400942AE7 /* EditCardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090166D2BAE173400942AE7 /* EditCardsVC.swift */; };
 		809016702BAE185F00942AE7 /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090166F2BAE185F00942AE7 /* EditCardView.swift */; };
+		809016732BAE22E100942AE7 /* CalculationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809016722BAE22E100942AE7 /* CalculationsVC.swift */; };
+		809016752BAE234A00942AE7 /* CalculationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809016742BAE234A00942AE7 /* CalculationsView.swift */; };
+		809016782BAE289B00942AE7 /* CurrencyPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809016772BAE289B00942AE7 /* CurrencyPairView.swift */; };
+		8090167C2BAE3B3400942AE7 /* CalculationResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090167B2BAE3B3400942AE7 /* CalculationResultVC.swift */; };
+		8090167E2BAE3B4100942AE7 /* CalculationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090167D2BAE3B4100942AE7 /* CalculationResultView.swift */; };
+		809016812BAE417700942AE7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 809016802BAE417700942AE7 /* IQKeyboardManagerSwift */; };
 		809904522BA983480010334C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809904512BA983480010334C /* AppDelegate.swift */; };
 		809904542BA983480010334C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809904532BA983480010334C /* SceneDelegate.swift */; };
 		8099045C2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8099045A2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld */; };
@@ -72,6 +78,11 @@
 		801E1F342BAA4CFD0081ECAB /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
 		8090166D2BAE173400942AE7 /* EditCardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardsVC.swift; sourceTree = "<group>"; };
 		8090166F2BAE185F00942AE7 /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
+		809016722BAE22E100942AE7 /* CalculationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsVC.swift; sourceTree = "<group>"; };
+		809016742BAE234A00942AE7 /* CalculationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsView.swift; sourceTree = "<group>"; };
+		809016772BAE289B00942AE7 /* CurrencyPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairView.swift; sourceTree = "<group>"; };
+		8090167B2BAE3B3400942AE7 /* CalculationResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationResultVC.swift; sourceTree = "<group>"; };
+		8090167D2BAE3B4100942AE7 /* CalculationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationResultView.swift; sourceTree = "<group>"; };
 		8099044E2BA983480010334C /* InterlinkedKnowledge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterlinkedKnowledge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809904512BA983480010334C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809904532BA983480010334C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				809904952BA9A6180010334C /* SnapKit in Frameworks */,
+				809016812BAE417700942AE7 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +172,42 @@
 				8090166D2BAE173400942AE7 /* EditCardsVC.swift */,
 			);
 			path = EditCardsVC;
+			sourceTree = "<group>";
+		};
+		809016712BAE22C900942AE7 /* Calculations */ = {
+			isa = PBXGroup;
+			children = (
+				8090167A2BAE3B1400942AE7 /* CalculationsVC */,
+				809016792BAE3B0400942AE7 /* CalculationResultVC */,
+			);
+			path = Calculations;
+			sourceTree = "<group>";
+		};
+		809016762BAE288900942AE7 /* CurrencyPairView */ = {
+			isa = PBXGroup;
+			children = (
+				809016772BAE289B00942AE7 /* CurrencyPairView.swift */,
+			);
+			path = CurrencyPairView;
+			sourceTree = "<group>";
+		};
+		809016792BAE3B0400942AE7 /* CalculationResultVC */ = {
+			isa = PBXGroup;
+			children = (
+				8090167D2BAE3B4100942AE7 /* CalculationResultView.swift */,
+				8090167B2BAE3B3400942AE7 /* CalculationResultVC.swift */,
+			);
+			path = CalculationResultVC;
+			sourceTree = "<group>";
+		};
+		8090167A2BAE3B1400942AE7 /* CalculationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				809016762BAE288900942AE7 /* CurrencyPairView */,
+				809016742BAE234A00942AE7 /* CalculationsView.swift */,
+				809016722BAE22E100942AE7 /* CalculationsVC.swift */,
+			);
+			path = CalculationsVC;
 			sourceTree = "<group>";
 		};
 		809904452BA983480010334C = {
@@ -261,6 +309,7 @@
 				809904692BA9A3960010334C /* Splash */,
 				8099046C2BA9A39D0010334C /* Onboarding */,
 				801E1F262BAA3B140081ECAB /* Holidays */,
+				809016712BAE22C900942AE7 /* Calculations */,
 				801E1F2E2BAA4C790081ECAB /* SettingsVC */,
 			);
 			path = Flow;
@@ -349,6 +398,7 @@
 			name = InterlinkedKnowledge;
 			packageProductDependencies = (
 				809904942BA9A6180010334C /* SnapKit */,
+				809016802BAE417700942AE7 /* IQKeyboardManagerSwift */,
 			);
 			productName = InterlinkedKnowledge;
 			productReference = 8099044E2BA983480010334C /* InterlinkedKnowledge.app */;
@@ -380,6 +430,7 @@
 			mainGroup = 809904452BA983480010334C;
 			packageReferences = (
 				8099048F2BA9A50A0010334C /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8090167F2BAE417700942AE7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 8099044F2BA983480010334C /* Products */;
 			projectDirPath = "";
@@ -407,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809016732BAE22E100942AE7 /* CalculationsVC.swift in Sources */,
 				8099047E2BA9A3C00010334C /* BaseViewController.swift in Sources */,
 				801E1F322BAA4CCC0081ECAB /* SettingsView.swift in Sources */,
 				80F75B992BACF6F9004C97AF /* TopRightButton.swift in Sources */,
@@ -420,6 +472,8 @@
 				809904832BA9A3C50010334C /* TabBarController.swift in Sources */,
 				801E1F282BAA3B240081ECAB /* HolidaysVC.swift in Sources */,
 				809016702BAE185F00942AE7 /* EditCardView.swift in Sources */,
+				809016752BAE234A00942AE7 /* CalculationsView.swift in Sources */,
+				8090167E2BAE3B4100942AE7 /* CalculationResultView.swift in Sources */,
 				80F75BA92BAD0506004C97AF /* Holiday+CoreDataProperties.swift in Sources */,
 				8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */,
 				809904882BA9A3DC0010334C /* OnboardingData.swift in Sources */,
@@ -435,10 +489,12 @@
 				80F75BAF2BAD08A6004C97AF /* HolidayCell.swift in Sources */,
 				809904542BA983480010334C /* SceneDelegate.swift in Sources */,
 				809904822BA9A3C50010334C /* Double + Extension .swift in Sources */,
+				809016782BAE289B00942AE7 /* CurrencyPairView.swift in Sources */,
 				8090166E2BAE173400942AE7 /* EditCardsVC.swift in Sources */,
 				801E1F352BAA4CFD0081ECAB /* SettingsButtonView.swift in Sources */,
 				8099047F2BA9A3C50010334C /* Date + Extension.swift in Sources */,
 				8099048D2BA9A3E10010334C /* SplashView.swift in Sources */,
+				8090167C2BAE3B3400942AE7 /* CalculationResultVC.swift in Sources */,
 				801E1F232BAA21AA0081ECAB /* OnboardingView.swift in Sources */,
 				809904852BA9A3CB0010334C /* CustomTextFieldView.swift in Sources */,
 				80F75B9C2BAD039C004C97AF /* CoreDataManager.swift in Sources */,
@@ -659,6 +715,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8090167F2BAE417700942AE7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.2;
+			};
+		};
 		8099048F2BA9A50A0010334C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -670,6 +734,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		809016802BAE417700942AE7 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8090167F2BAE417700942AE7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		809904942BA9A6180010334C /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8099048F2BA9A50A0010334C /* XCRemoteSwiftPackageReference "SnapKit" */;

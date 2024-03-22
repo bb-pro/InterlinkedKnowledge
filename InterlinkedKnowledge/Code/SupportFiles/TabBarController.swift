@@ -42,7 +42,7 @@ final class TabBarController: UITabBarController {
         holidaysVC.tabBarItem.image = .tabIcon1
         let holidaysVCC = UINavigationController(rootViewController: holidaysVC)
         
-        let calculationsVC = BaseViewController()
+        let calculationsVC = CalculationsVC()
         calculationsVC.tabBarItem.title = "Calculations"
         calculationsVC.tabBarItem.image = .tabIcon2
         let calculationsVCC = UINavigationController(rootViewController: calculationsVC)
