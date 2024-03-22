@@ -90,6 +90,15 @@ final class AddHolidayView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func updateUI(with holiday: Holiday) {
+        titleLabel.text = "Edit holidays"
+        addButton.setTitle("Save", for: .normal)
+        costTFView.field.text = "\(holiday.cost)"
+        nameTFView.field.text = holiday.name
+        purchaseTFView.field.text = holiday.purchases
+        datePicker.date = holiday.date ?? Date()
+    }
+    
     private func setUpViews() {
         self.backgroundColor = MyColors.smokeWhite.color
         addSubview(topImgView)

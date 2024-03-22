@@ -33,6 +33,7 @@ final class TotalInfoView: UIView {
         let lbl = UILabel()
         lbl.font = .customSFProFont(.bold, size: 22)
         lbl.textColor = MyColors.darkGray.color
+        lbl.numberOfLines = 0
         return lbl
     }()
     
@@ -73,6 +74,7 @@ final class TotalInfoView: UIView {
         totalLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(14)
             make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-24)
         }
         
         iconImageView.snp.makeConstraints { make in

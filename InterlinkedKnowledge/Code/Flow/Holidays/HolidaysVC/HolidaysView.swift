@@ -44,6 +44,9 @@ final class HolidaysView: UIView {
         let tableView = UITableView()
         tableView.separatorInset = .zero
         tableView.separatorStyle = .none
+        tableView.register(HolidayCell.self, forCellReuseIdentifier: HolidayCell.id)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         return tableView
     }()
     

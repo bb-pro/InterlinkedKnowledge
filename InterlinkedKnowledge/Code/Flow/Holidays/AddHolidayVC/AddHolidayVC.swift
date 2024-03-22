@@ -20,9 +20,15 @@ final class AddHolidayVC: ModalVC {
     
     private let coreDataManager = CoreDataManager.shared
     
+    var holiday: Holiday?
+    
     override func loadView() {
         view = AddHolidayView()
         setupTargets()
+        
+        if let holiday = holiday {
+            contentView.updateUI(with: holiday)
+        }
     }
     
     // MARK: - Actions
@@ -58,9 +64,13 @@ final class AddHolidayVC: ModalVC {
         }
         let date = contentView.datePicker.date
         
-        coreDataManager.createHoliday(name: name, cost: cost, date: date, purchases: purchases)
+        if let holiday = holiday {
+            coreDataManager.editHoliday(holiday, name: name, cost: cost, date: date, purchases: purchases)
+        } else {
+            coreDataManager.createHoliday(name: name, cost: cost, date: date, purchases: purchases)
+        }
         delegate?.dismiss()
-        dismiss(animated: true)
+        dismissAllPresentedViewControllers()
     }
 }
 

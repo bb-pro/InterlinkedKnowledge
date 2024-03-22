@@ -17,8 +17,16 @@ class ModalVC: UIViewController, UIGestureRecognizerDelegate {
         tap.delegate = self
         self.hideKeyboardWhenTappedAround()
         navigationController?.navigationBar.tintColor = MyColors.black.color
-
+        view.backgroundColor = MyColors.smokeWhite.color
     }
+    
+    func dismissAllPresentedViewControllers() {
+          var presentedViewController = presentingViewController
+          while let presentedVC = presentedViewController?.presentingViewController {
+              presentedViewController = presentedVC
+          }
+          presentedViewController?.dismiss(animated: true)
+      }
     
     @objc open func dismissKeyboard() {
         view.endEditing(true)

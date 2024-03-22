@@ -13,12 +13,18 @@ final class HolidaysVC: BaseViewController {
         view as? HolidaysView ?? HolidaysView()
     }
     
-    private var holidays = CoreDataManager.shared.fetchHolidays()
+    private var holidays = CoreDataManager.shared.fetchHolidays() {
+        didSet {
+            contentView.centerLabel.isHidden = !holidays.isEmpty
+            contentView.tableView.reloadData()
+        }
+    }
     
     override func loadView() {
         view = HolidaysView()
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
+        contentView.centerLabel.isHidden = !holidays.isEmpty
     }
 
 }
@@ -30,12 +36,16 @@ extension HolidaysVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: HolidayCell.id, for: indexPath) as! HolidayCell
+        let holiday = holidays[indexPath.row]
+        cell.configure(with: holiday)
+        cell.selectionStyle = .none
+        return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
-        headerView.backgroundColor = .clear
+        headerView.backgroundColor = .white
         
         let label = UILabel(frame: CGRect(x: 10, y: 0, width: headerView.frame.width - 60, height: headerView.frame.height))
         label.text = "Holidays"
@@ -57,8 +67,14 @@ extension HolidaysVC: UITableViewDataSource, UITableViewDelegate {
         return 34
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let addHolidayVC = HolidayInfoVC()
+//        addHolidayVC.delegate = self
+        addHolidayVC.holiday = holidays[indexPath.row]
+        present(addHolidayVC, animated: true)
+    }
+    
     @objc func addButtonTapped() {
-        print("Add")
         let addHolidayVC = AddHolidayVC()
         addHolidayVC.delegate = self
         present(addHolidayVC, animated: true)
@@ -70,6 +86,6 @@ extension HolidaysVC: UITableViewDataSource, UITableViewDelegate {
 extension HolidaysVC: DismissDelegate {
     
     func dismiss() {
-        
+        holidays = CoreDataManager.shared.fetchHolidays()
     }
 }

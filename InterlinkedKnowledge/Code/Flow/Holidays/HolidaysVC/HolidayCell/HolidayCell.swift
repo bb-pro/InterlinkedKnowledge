@@ -17,10 +17,22 @@ final class HolidayCell: UITableViewCell {
         view.backgroundColor = MyColors.bgSecond.color
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
+        view.addSubview(dateLabel)
+        view.addSubview(presentImgView)
+        view.addSubview(costLabel)
+        view.layer.cornerRadius = 6
         return view
     }()
     
     private lazy var titleLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.font = .customSFProFont(.semibold, size: 17)
+        lbl.textColor = .black
+        return lbl
+    }()
+    
+    private lazy var costLabel: UILabel = {
         let lbl = UILabel()
         lbl.font = .customSFProFont(.semibold, size: 17)
         lbl.textColor = .black
@@ -58,11 +70,45 @@ final class HolidayCell: UITableViewCell {
     }
     
     func setUpViews() {
-        
+        addSubview(backgroundContentView)
+    }
+    
+    func configure(with holiday: Holiday) {
+        titleLabel.text = holiday.name
+        costLabel.text = "\(holiday.cost)"
+        dateLabel.text = holiday.date?.formatted()
     }
     
     func setUpConstraints() {
         
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(16)
+            make.left.equalToSuperview().offset(80)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
+        presentImgView.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.height.width.equalTo(57)
+        }
+        
+        dateLabel.snp.makeConstraints { make in
+            make.left.equalTo(presentImgView.snp.right).offset(16)
+            make.bottom.equalToSuperview().offset(-16)
+        }
+        
+        costLabel.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-16)
+            make.centerY.equalToSuperview()
+        }
+        
+        backgroundContentView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(8)
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-8)
+            make.height.equalTo(94)
+        }
     }
     
 }
