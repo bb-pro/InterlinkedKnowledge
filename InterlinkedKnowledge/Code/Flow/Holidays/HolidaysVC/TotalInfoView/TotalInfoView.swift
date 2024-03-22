@@ -91,4 +91,12 @@ final class TotalInfoView: UIView {
         titleLabel.text = data.title
         totalLabel.text = data.total
     }
+    
+    func configure(with total: Int16) {
+        totalLabel.text = "\(total)"
+    }
+    
+    func configure(wtih total: String) {
+        totalLabel.text = total
+    }
 }

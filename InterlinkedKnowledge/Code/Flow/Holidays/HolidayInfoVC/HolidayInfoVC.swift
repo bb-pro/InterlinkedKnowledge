@@ -7,11 +7,13 @@
 
 import UIKit
 
-final class HolidayInfoVC: ModalVC {
-    
+final class HolidayInfoVC: ModalVC, DismissDelegate {
+
     private var contentView: HolidayInfoView {
         view as? HolidayInfoView ?? HolidayInfoView()
     }
+    
+    weak var delegate: DismissDelegate?
     
     var holiday: Holiday!
     
@@ -24,9 +26,15 @@ final class HolidayInfoVC: ModalVC {
     
     // MARK: - Actions
     
+    func dismiss() {
+        delegate?.dismiss()
+        dismissAllPresentedViewControllers()
+    }
+    
     @objc func editPressed() {
         let addHolidayVC = AddHolidayVC()
         addHolidayVC.holiday = holiday
+        addHolidayVC.delegate = self
         present(addHolidayVC, animated: true)
     }
     @objc func deletePressed() {
@@ -45,5 +53,6 @@ final class HolidayInfoVC: ModalVC {
         private func deleteHoliday() {
             CoreDataManager.shared.deleteHoliday(holiday)
             dismissAllPresentedViewControllers()
+            delegate?.dismiss()
         }
 }

@@ -52,8 +52,12 @@ final class AddHolidayVC: ModalVC {
         let purchaseText = contentView.purchaseTFView.field.text ?? ""
         
         let isAnyFieldEmpty = nameText.isEmpty || costText.isEmpty || purchaseText.isEmpty
-        contentView.addButton.isEnabled = !isAnyFieldEmpty
+        
+        let isValidCost = Int16(costText) != nil
+        
+        contentView.addButton.isEnabled = !isAnyFieldEmpty && isValidCost
     }
+
     
     @objc private func addButtonPressed() {
         guard let name = contentView.nameTFView.field.text,

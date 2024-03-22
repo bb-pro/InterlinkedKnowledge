@@ -28,11 +28,16 @@ final class OnboardingVC: BaseViewController {
         if currentIndex < onboardingData.count {
             contentView.updateUI(data: onboardingData[currentIndex])
             currentIndex += 1
-
         } else {
             let tabBarVC = TabBarController()
-            tabBarVC.modalPresentationStyle = .fullScreen
-            present(tabBarVC, animated: true)
+            
+            // Set tabBarVC as the root view controller
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let sceneDelegate = windowScene.delegate as? SceneDelegate {
+                sceneDelegate.window?.rootViewController = tabBarVC
+                sceneDelegate.window?.makeKeyAndVisible()
+            }
         }
     }
+
 }

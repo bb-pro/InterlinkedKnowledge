@@ -126,7 +126,7 @@ final class HolidayInfoView: UIView {
         costView.configure(with: TotalData(iconName: "dollarSign", title: "Cost", total: "\(holiday.cost)"))
         
         dateView.configure(with: TotalData(iconName: "calendar-circle", title: "Date and time", total: holiday.date?.formatted() ?? Date().formatted()))
-        
+        titleLabel.text = holiday.name
         purchasesLabel.text = holiday.purchases
     }
     

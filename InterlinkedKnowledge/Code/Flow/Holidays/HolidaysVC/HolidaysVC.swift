@@ -13,10 +13,14 @@ final class HolidaysVC: BaseViewController {
         view as? HolidaysView ?? HolidaysView()
     }
     
+    var totalCount: Int! = 0
+    var totalAmount: Int16! = 0
+    
     private var holidays = CoreDataManager.shared.fetchHolidays() {
         didSet {
             contentView.centerLabel.isHidden = !holidays.isEmpty
             contentView.tableView.reloadData()
+            updateUI()
         }
     }
     
@@ -25,8 +29,38 @@ final class HolidaysVC: BaseViewController {
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
         contentView.centerLabel.isHidden = !holidays.isEmpty
+        holidays.forEach({totalAmount += $0.cost})
+        totalCount = holidays.count
+        updateUI()
+    }
+    
+    func updateUI() {
+        contentView.totalAmountView.configure(wtih: "$\(totalAmount ?? 0)")
+        contentView.totalHolidaysView.configure(wtih: String(totalCount))
+        contentView.editButton.actionButton(target: self, action: #selector(editPressed))
+    }
+    
+    // MARK: - Actions
+    
+    @objc func editPressed() {
+        let editCardVC = EditCardsVC()
+        editCardVC.totalAmount = "\(totalAmount ?? 0)"
+        editCardVC.totalCount = "\(totalCount ?? 0)"
+        editCardVC.delegate = self
+        present(editCardVC, animated: true)
     }
 
+}
+
+// MARK: - EditCardVCDelegate
+
+extension HolidaysVC: EditCardDelegate {
+    func editCardData(total: String, quantity: String) {
+        totalAmount = Int16(total)
+        totalCount = Int(quantity)
+        contentView.totalAmountView.configure(wtih: "$\(totalAmount ?? 0)")
+        contentView.totalHolidaysView.configure(wtih: String(totalCount))
+    }
 }
 
 // MARK: - UITableViewDataSource and Delegate methods
@@ -69,7 +103,7 @@ extension HolidaysVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let addHolidayVC = HolidayInfoVC()
-//        addHolidayVC.delegate = self
+        addHolidayVC.delegate = self
         addHolidayVC.holiday = holidays[indexPath.row]
         present(addHolidayVC, animated: true)
     }
@@ -87,5 +121,6 @@ extension HolidaysVC: DismissDelegate {
     
     func dismiss() {
         holidays = CoreDataManager.shared.fetchHolidays()
+        contentView.tableView.reloadData()
     }
 }
