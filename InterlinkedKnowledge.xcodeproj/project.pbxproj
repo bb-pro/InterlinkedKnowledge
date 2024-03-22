@@ -34,6 +34,14 @@
 		8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099046A2BA9A3960010334C /* SplashVC.swift */; };
 		8099048D2BA9A3E10010334C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099046B2BA9A3960010334C /* SplashView.swift */; };
 		809904952BA9A6180010334C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 809904942BA9A6180010334C /* SnapKit */; };
+		80F75B952BACEE1A004C97AF /* AddHolidayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B942BACEE1A004C97AF /* AddHolidayVC.swift */; };
+		80F75B972BACEE26004C97AF /* AddHolidayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B962BACEE26004C97AF /* AddHolidayView.swift */; };
+		80F75B992BACF6F9004C97AF /* TopRightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B982BACF6F9004C97AF /* TopRightButton.swift */; };
+		80F75B9C2BAD039C004C97AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B9B2BAD039C004C97AF /* CoreDataManager.swift */; };
+		80F75BA82BAD0506004C97AF /* Holiday+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BA62BAD0506004C97AF /* Holiday+CoreDataClass.swift */; };
+		80F75BA92BAD0506004C97AF /* Holiday+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BA72BAD0506004C97AF /* Holiday+CoreDataProperties.swift */; };
+		80F75BAC2BAD0734004C97AF /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BAB2BAD0734004C97AF /* ModalVC.swift */; };
+		80F75BAF2BAD08A6004C97AF /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BAE2BAD08A6004C97AF /* HolidayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,6 +86,14 @@
 		8099047A2BA9A3A30010334C /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		8099047B2BA9A3A30010334C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8099047C2BA9A3A30010334C /* Font + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extention.swift"; sourceTree = "<group>"; };
+		80F75B942BACEE1A004C97AF /* AddHolidayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHolidayVC.swift; sourceTree = "<group>"; };
+		80F75B962BACEE26004C97AF /* AddHolidayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHolidayView.swift; sourceTree = "<group>"; };
+		80F75B982BACF6F9004C97AF /* TopRightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRightButton.swift; sourceTree = "<group>"; };
+		80F75B9B2BAD039C004C97AF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		80F75BA62BAD0506004C97AF /* Holiday+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Holiday+CoreDataClass.swift"; sourceTree = "<group>"; };
+		80F75BA72BAD0506004C97AF /* Holiday+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Holiday+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		80F75BAB2BAD0734004C97AF /* ModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalVC.swift; sourceTree = "<group>"; };
+		80F75BAE2BAD08A6004C97AF /* HolidayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +111,8 @@
 		801E1F262BAA3B140081ECAB /* Holidays */ = {
 			isa = PBXGroup;
 			children = (
-				801E1F2B2BAA3BA60081ECAB /* TotalInfoView */,
-				801E1F272BAA3B240081ECAB /* HolidaysVC.swift */,
-				801E1F292BAA3B2B0081ECAB /* HolidaysView.swift */,
+				80F75B922BACEDFC004C97AF /* HolidaysVC */,
+				80F75B932BACEE03004C97AF /* AddHolidayVC */,
 			);
 			path = Holidays;
 			sourceTree = "<group>";
@@ -149,8 +164,7 @@
 			children = (
 				809904682BA9A2B10010334C /* App */,
 				8099047D2BA9A3AA0010334C /* Code */,
-				8099045D2BA9834D0010334C /* Assets.xcassets */,
-				8099045A2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld */,
+				80F75BAA2BAD0586004C97AF /* Resources */,
 			);
 			path = InterlinkedKnowledge;
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 				809904532BA983480010334C /* SceneDelegate.swift */,
 				809904622BA9834D0010334C /* Info.plist */,
 				8099045F2BA9834D0010334C /* LaunchScreen.storyboard */,
+				80F75B9A2BAD038C004C97AF /* DataManager */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -190,6 +205,7 @@
 			children = (
 				809904732BA9A3A20010334C /* CustomViews */,
 				809904722BA9A3A20010334C /* BaseViewController.swift */,
+				80F75BAB2BAD0734004C97AF /* ModalVC.swift */,
 				809904782BA9A3A20010334C /* Double + Extension .swift */,
 				809904792BA9A3A30010334C /* MyColors.swift */,
 				8099047A2BA9A3A30010334C /* Date + Extension.swift */,
@@ -206,6 +222,7 @@
 				809904752BA9A3A20010334C /* CustomTextFieldView.swift */,
 				809904762BA9A3A20010334C /* CustomButtonView.swift */,
 				809904772BA9A3A20010334C /* CustomPageControlView.swift */,
+				80F75B982BACF6F9004C97AF /* TopRightButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -228,6 +245,61 @@
 				801E1F2E2BAA4C790081ECAB /* SettingsVC */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		80F75B922BACEDFC004C97AF /* HolidaysVC */ = {
+			isa = PBXGroup;
+			children = (
+				80F75BAD2BAD0892004C97AF /* HolidayCell */,
+				801E1F2B2BAA3BA60081ECAB /* TotalInfoView */,
+				801E1F272BAA3B240081ECAB /* HolidaysVC.swift */,
+				801E1F292BAA3B2B0081ECAB /* HolidaysView.swift */,
+			);
+			path = HolidaysVC;
+			sourceTree = "<group>";
+		};
+		80F75B932BACEE03004C97AF /* AddHolidayVC */ = {
+			isa = PBXGroup;
+			children = (
+				80F75B942BACEE1A004C97AF /* AddHolidayVC.swift */,
+				80F75B962BACEE26004C97AF /* AddHolidayView.swift */,
+			);
+			path = AddHolidayVC;
+			sourceTree = "<group>";
+		};
+		80F75B9A2BAD038C004C97AF /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				80F75B9D2BAD03A5004C97AF /* Models */,
+				8099045A2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld */,
+				80F75B9B2BAD039C004C97AF /* CoreDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		80F75B9D2BAD03A5004C97AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80F75BA62BAD0506004C97AF /* Holiday+CoreDataClass.swift */,
+				80F75BA72BAD0506004C97AF /* Holiday+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		80F75BAA2BAD0586004C97AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8099045D2BA9834D0010334C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		80F75BAD2BAD0892004C97AF /* HolidayCell */ = {
+			isa = PBXGroup;
+			children = (
+				80F75BAE2BAD08A6004C97AF /* HolidayCell.swift */,
+			);
+			path = HolidayCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,21 +381,27 @@
 			files = (
 				8099047E2BA9A3C00010334C /* BaseViewController.swift in Sources */,
 				801E1F322BAA4CCC0081ECAB /* SettingsView.swift in Sources */,
+				80F75B992BACF6F9004C97AF /* TopRightButton.swift in Sources */,
 				801E1F2A2BAA3B2B0081ECAB /* HolidaysView.swift in Sources */,
 				801E1F252BAA2CEA0081ECAB /* OnboardingVC.swift in Sources */,
+				80F75BAC2BAD0734004C97AF /* ModalVC.swift in Sources */,
 				809904842BA9A3CB0010334C /* CustomPageControlView.swift in Sources */,
 				809904812BA9A3C50010334C /* MyColors.swift in Sources */,
 				809904802BA9A3C50010334C /* Font + Extention.swift in Sources */,
 				809904832BA9A3C50010334C /* TabBarController.swift in Sources */,
 				801E1F282BAA3B240081ECAB /* HolidaysVC.swift in Sources */,
+				80F75BA92BAD0506004C97AF /* Holiday+CoreDataProperties.swift in Sources */,
 				8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */,
 				809904882BA9A3DC0010334C /* OnboardingData.swift in Sources */,
+				80F75BA82BAD0506004C97AF /* Holiday+CoreDataClass.swift in Sources */,
 				801E1F2D2BAA3BC30081ECAB /* TotalInfoView.swift in Sources */,
 				801E1F302BAA4CBC0081ECAB /* SettingsVC.swift in Sources */,
 				809904522BA983480010334C /* AppDelegate.swift in Sources */,
 				809904872BA9A3CB0010334C /* CustomButtonView.swift in Sources */,
 				809904862BA9A3CB0010334C /* ProfileButtonView.swift in Sources */,
 				8099045C2BA983480010334C /* InterlinkedKnowledge.xcdatamodeld in Sources */,
+				80F75B972BACEE26004C97AF /* AddHolidayView.swift in Sources */,
+				80F75BAF2BAD08A6004C97AF /* HolidayCell.swift in Sources */,
 				809904542BA983480010334C /* SceneDelegate.swift in Sources */,
 				809904822BA9A3C50010334C /* Double + Extension .swift in Sources */,
 				801E1F352BAA4CFD0081ECAB /* SettingsButtonView.swift in Sources */,
@@ -331,6 +409,8 @@
 				8099048D2BA9A3E10010334C /* SplashView.swift in Sources */,
 				801E1F232BAA21AA0081ECAB /* OnboardingView.swift in Sources */,
 				809904852BA9A3CB0010334C /* CustomTextFieldView.swift in Sources */,
+				80F75B9C2BAD039C004C97AF /* CoreDataManager.swift in Sources */,
+				80F75B952BACEE1A004C97AF /* AddHolidayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

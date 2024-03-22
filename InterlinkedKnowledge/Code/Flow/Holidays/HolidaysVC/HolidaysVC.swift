@@ -13,6 +13,8 @@ final class HolidaysVC: BaseViewController {
         view as? HolidaysView ?? HolidaysView()
     }
     
+    private var holidays = CoreDataManager.shared.fetchHolidays()
+    
     override func loadView() {
         view = HolidaysView()
         contentView.tableView.dataSource = self
@@ -24,7 +26,7 @@ final class HolidaysVC: BaseViewController {
 // MARK: - UITableViewDataSource and Delegate methods
 extension HolidaysVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        holidays.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,5 +59,17 @@ extension HolidaysVC: UITableViewDataSource, UITableViewDelegate {
     
     @objc func addButtonTapped() {
         print("Add")
+        let addHolidayVC = AddHolidayVC()
+        addHolidayVC.delegate = self
+        present(addHolidayVC, animated: true)
+    }
+}
+
+// MARK: - DismissDelegate
+
+extension HolidaysVC: DismissDelegate {
+    
+    func dismiss() {
+        
     }
 }
