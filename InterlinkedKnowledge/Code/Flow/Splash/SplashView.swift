@@ -85,6 +85,7 @@ class SplashView: UIView {
         
         progresStack.snp.makeConstraints { make in
             make.center.equalTo(loadView)
+            make.width.equalTo(100)
         }
     }
 }

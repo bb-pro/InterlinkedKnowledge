@@ -66,7 +66,7 @@ final class OnboardingView: UIView {
     
     private func setUpViews() {
         backgroundColor = .white
-        [progressImageView, mainImageView, titleLabel, subtitleLabel, nextButton].forEach{(addSubview($0))}
+        [mainImageView, progressImageView, titleLabel, subtitleLabel, nextButton].forEach{(addSubview($0))}
         
     }
     
@@ -88,7 +88,7 @@ final class OnboardingView: UIView {
         }
         
         mainImageView.snp.makeConstraints { make in
-            make.top.equalTo(subtitleLabel.snp.bottom)
+            make.top.equalTo(subtitleLabel.snp.bottom).offset(-48)
             make.left.right.equalToSuperview()
             make.bottom.equalTo(nextButton.snp.top).offset(-17)
         }

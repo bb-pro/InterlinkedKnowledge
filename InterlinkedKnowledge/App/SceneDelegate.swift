@@ -25,8 +25,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneDelegateDelegate {
     }
     
     func changeRootViewController() {
-        window?.rootViewController = OnboardingVC()
-        window?.makeKeyAndVisible()   
+        let isOnboardingCompleted = UserDefaults.standard.bool(forKey: "OnboardingCompleted")
+        
+        if isOnboardingCompleted {
+            window?.rootViewController = TabBarController()
+        } else {
+            window?.rootViewController = OnboardingVC()
+        }
+        
+        window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

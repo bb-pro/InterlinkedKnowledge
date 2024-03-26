@@ -37,6 +37,7 @@ final class EditCardView: UIView {
         view.snp.makeConstraints { make in
             make.height.equalTo(44)
         }
+        view.field.keyboardType = .numberPad
         return view
     }()
     

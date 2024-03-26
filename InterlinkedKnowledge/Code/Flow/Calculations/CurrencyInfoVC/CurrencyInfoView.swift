@@ -85,16 +85,16 @@ final class CurrencyInfoView: UIView {
     }
     
     func configure(with currency: CurrencyResult) {
-        
         let amount = currency.resultBuyItem
         let profit = currency.resultSellItem - currency.resultBuyItem
-        let profitPercent = currency.resultSellItem / currency.resultBuyItem
-        let profitString = profit > 0 ? "$+\(profit)(\(profitPercent))" : "$\(profit)(\(profitPercent))"
+        let profitPercent = (Float(profit) / Float(currency.resultBuyItem)) * 100
+        let profitString = profit > 0 ? "$+\(profit) (\(String(format: "%.2f", profitPercent))%)" : "$\(profit) (\(String(format: "%.2f", profitPercent))%)"
         
         titleLabel.text = currency.resultCurrencyItem.dividedBySlash()
         valueLabel.text = "\(amount)"
         profitLabel.text = profitString
     }
+
     
     func setUpViews() {
         addSubview(topImgView)

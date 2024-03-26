@@ -150,6 +150,8 @@ final class CalculationsView: UIView {
         addSubview(editButton)
         addSubview(currencyView)
         addSubview(segmentStack)
+        addSubview(tableView)
+        addSubview(centerLabel)
         addSubview(textfieldStack)
     }
     
@@ -176,6 +178,16 @@ final class CalculationsView: UIView {
         
         calculateBtn.snp.makeConstraints { make in
             make.height.equalTo(44)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(segmentStack.snp.bottom).offset(32)
+            make.left.equalToSuperview().offset(16)
+            make.right.bottom.equalToSuperview().offset(-16)
+        }
+        
+        centerLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
         
         textfieldStack.snp.makeConstraints { make in

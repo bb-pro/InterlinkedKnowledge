@@ -29,9 +29,8 @@ final class OnboardingVC: BaseViewController {
             contentView.updateUI(data: onboardingData[currentIndex])
             currentIndex += 1
         } else {
+            UserDefaults.standard.set(true, forKey: "OnboardingCompleted")
             let tabBarVC = TabBarController()
-            
-            // Set tabBarVC as the root view controller
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let sceneDelegate = windowScene.delegate as? SceneDelegate {
                 sceneDelegate.window?.rootViewController = tabBarVC

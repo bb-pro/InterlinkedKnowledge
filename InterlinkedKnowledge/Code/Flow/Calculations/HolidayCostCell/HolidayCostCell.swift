@@ -69,6 +69,14 @@ final class HolidayCostCell: UITableViewCell {
     
     
     private func setUpConstraints() {
+        
+        backgroundContentView.snp.makeConstraints { make in
+            make.height.equalTo(94)
+            make.left.right.equalToSuperview()
+            make.top.equalToSuperview().offset(8)
+            make.bottom.equalToSuperview().offset(-8)
+        }
+        
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(80)

@@ -17,13 +17,57 @@ final class CalculationsVC: BaseViewController {
         view = CalculationsView()
         contentView.calculateBtn.actionButton(target: self, action: #selector(calculatePressed))
         contentView.segmentedControl.addTarget(self, action: #selector(segmentAction), for: .valueChanged)
-        contentView.currencyView.actionButton.addTarget(self, action: #selector(currencyPressed), for: .touchUpInside)
+        contentView.editButton.actionButton.addTarget(self, action: #selector(currencyPressed), for: .touchUpInside)
+        
+        contentView.decoratingTF.field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        contentView.drinksTF.field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        contentView.giftTF.field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        contentView.mealTF.field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        contentView.rentTF.field.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
+        updateUI()
+    }
+    
+    func updateUI() {
+        if contentView.segmentedControl.selectedSegmentIndex == 1 {
+            if CoreDataManager.shared.fetchHolidayCosts().isEmpty {
+                contentView.centerLabel.isHidden = false
+                contentView.tableView.isHidden = true
+            } else {
+                contentView.centerLabel.isHidden = true
+                contentView.tableView.isHidden = false
+            }
+        } else {
+            contentView.tableView.isHidden = true
+            contentView.centerLabel.isHidden = true
+        }
+        print(CoreDataManager.shared.fetchHolidayCosts())
+        contentView.tableView.reloadData()
     }
     
     // MARK: - Actions
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        let isValidInt = { (text: String?) -> Bool in
+            if let text = text, let _ = Int(text) {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        let isValidInput = isValidInt(contentView.decoratingTF.field.text) ||
+        isValidInt(contentView.drinksTF.field.text) ||
+        isValidInt(contentView.giftTF.field.text) ||
+        isValidInt(contentView.mealTF.field.text) ||
+        isValidInt(contentView.rentTF.field.text)
+        
+        contentView.calculateBtn.actionButton.isEnabled = isValidInput
+    }
+    
+    
     
     @objc func currencyPressed() {
         let currencyListVC = CurrencyListVC()
@@ -33,11 +77,35 @@ final class CalculationsVC: BaseViewController {
     
     @objc func segmentAction() {
         contentView.textfieldStack.isHidden = contentView.segmentedControl.selectedSegmentIndex == 1
+        //        contentView.tableView.isHidden = contentView.segmentedControl.selectedSegmentIndex == 0
+        updateUI()
     }
     
     @objc func calculatePressed() {
+        let drinksCost = Int(contentView.drinksTF.field.text ?? "0") ?? 0
+        let giftCost = Int(contentView.giftTF.field.text ?? "0") ?? 0
+        let mealCost = Int(contentView.mealTF.field.text ?? "0") ?? 0
+        let rentCost = Int(contentView.rentTF.field.text ?? "0") ?? 0
+        
+        let name = contentView.nameTFView.field.text ?? ""
+        
+        let totalCost = drinksCost + giftCost + mealCost + rentCost
+        
         let resultVC = CalculationResultVC()
+        resultVC.name = name
+        resultVC.cost = Int32(totalCost)
+        resultVC.delegate = self
         present(resultVC, animated: true)
+        
+    }
+    
+}
+
+// MARK: - ResultVCDelegate
+
+extension CalculationsVC: CalculationResultVCDelegate {
+    func savePressed() {
+        updateUI()
     }
 }
 
