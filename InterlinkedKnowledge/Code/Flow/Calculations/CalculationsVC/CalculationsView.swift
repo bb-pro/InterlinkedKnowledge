@@ -9,10 +9,10 @@ import UIKit
 
 final class CalculationsView: UIView {
     
-    private lazy var currencyView: CurrencyPairView = {
+    private(set) lazy var currencyView: CurrencyPairView = {
         let view = CurrencyPairView()
         view.configure(with: CurrencyPair(
-            image: "pair1",
+            image: "EURUSD",
             name: "EUR/USD",
             amount: "",
             profit: "",
@@ -120,10 +120,10 @@ final class CalculationsView: UIView {
         let tableView = UITableView()
         tableView.separatorInset = .zero
         tableView.separatorStyle = .none
-        tableView.register(HolidayCell.self, forCellReuseIdentifier: HolidayCell.id)
+        tableView.register(HolidayCostCell.self, forCellReuseIdentifier: HolidayCostCell.id)
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
-        return tableView   
+        return tableView
     }()
     
     private(set) lazy var centerLabel: UILabel = {

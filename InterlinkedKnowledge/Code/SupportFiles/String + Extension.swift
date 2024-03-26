@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+extension String {
+    func dividedBySlash() -> String {
+        guard count >= 6 else {
+            return self
+        }
+
+        let index = index(startIndex, offsetBy: 3)
+        let firstPart = self[..<index]
+        let secondPart = self[index...]
+        return "\(firstPart)/\(secondPart)"
+    }
+}

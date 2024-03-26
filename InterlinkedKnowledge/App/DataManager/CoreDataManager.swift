@@ -70,4 +70,39 @@ public final class CoreDataManager: NSObject {
         
         appDelegate?.saveContext()
     }
+    
+    // MARK: - HolidayCost
+    
+    public func createHolidayCost(name: String, cost: Int32) {
+        guard let unwrappedContext = context,
+              let holidayEntityDescription = NSEntityDescription.entity(forEntityName: "HolidayCost", in: unwrappedContext) else {
+            return
+        }
+        
+        let holiday = HolidayCost(entity: holidayEntityDescription, insertInto: unwrappedContext)
+        holiday.name = name
+        holiday.cost = cost
+        
+        appDelegate?.saveContext()
+    }
+    
+    // Fetch all holidayCosts
+    public func fetchHolidayCosts() -> [HolidayCost] {
+        let fetchRequest = NSFetchRequest<HolidayCost>(entityName: "HolidayCost")
+        
+        do {
+            if let fetchedObjects = try context?.fetch(fetchRequest) {
+                return fetchedObjects
+            } else {
+                print("Failed to fetch objects")
+            }
+        } catch {
+            print("Error during fetchHolidays: \(error)")
+        }
+        
+        return []
+    }
+    
 }
+
+

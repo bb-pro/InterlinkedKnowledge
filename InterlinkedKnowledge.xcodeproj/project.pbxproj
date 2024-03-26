@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800BA7512BB24798006A46C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BA7502BB24798006A46C3 /* NetworkManager.swift */; };
+		800BA7552BB29427006A46C3 /* CurrencyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BA7542BB29427006A46C3 /* CurrencyListVC.swift */; };
+		800BA7572BB2943A006A46C3 /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BA7562BB2943A006A46C3 /* CurrencyListView.swift */; };
+		800BA75A2BB29515006A46C3 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BA7592BB29515006A46C3 /* CurrencyCell.swift */; };
 		801E1F232BAA21AA0081ECAB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F222BAA21AA0081ECAB /* OnboardingView.swift */; };
 		801E1F252BAA2CEA0081ECAB /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F242BAA2CEA0081ECAB /* OnboardingVC.swift */; };
 		801E1F282BAA3B240081ECAB /* HolidaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E1F272BAA3B240081ECAB /* HolidaysVC.swift */; };
@@ -42,12 +46,16 @@
 		8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099046A2BA9A3960010334C /* SplashVC.swift */; };
 		8099048D2BA9A3E10010334C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099046B2BA9A3960010334C /* SplashView.swift */; };
 		809904952BA9A6180010334C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 809904942BA9A6180010334C /* SnapKit */; };
+		80AB8E842BB1967300851682 /* HolidayCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB8E822BB1967300851682 /* HolidayCost.swift */; };
+		80AB8E882BB1985F00851682 /* HolidayCostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB8E872BB1985F00851682 /* HolidayCostCell.swift */; };
+		80DB41E92BB346A60081CFCE /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB41E82BB346A60081CFCE /* String + Extension.swift */; };
+		80DB41EC2BB34D8B0081CFCE /* CurrencyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB41EB2BB34D8B0081CFCE /* CurrencyInfoVC.swift */; };
+		80DB41EE2BB34D960081CFCE /* CurrencyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB41ED2BB34D960081CFCE /* CurrencyInfoView.swift */; };
 		80F75B952BACEE1A004C97AF /* AddHolidayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B942BACEE1A004C97AF /* AddHolidayVC.swift */; };
 		80F75B972BACEE26004C97AF /* AddHolidayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B962BACEE26004C97AF /* AddHolidayView.swift */; };
 		80F75B992BACF6F9004C97AF /* TopRightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B982BACF6F9004C97AF /* TopRightButton.swift */; };
 		80F75B9C2BAD039C004C97AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75B9B2BAD039C004C97AF /* CoreDataManager.swift */; };
-		80F75BA82BAD0506004C97AF /* Holiday+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BA62BAD0506004C97AF /* Holiday+CoreDataClass.swift */; };
-		80F75BA92BAD0506004C97AF /* Holiday+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BA72BAD0506004C97AF /* Holiday+CoreDataProperties.swift */; };
+		80F75BA92BAD0506004C97AF /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BA72BAD0506004C97AF /* Holiday.swift */; };
 		80F75BAC2BAD0734004C97AF /* ModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BAB2BAD0734004C97AF /* ModalVC.swift */; };
 		80F75BAF2BAD08A6004C97AF /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BAE2BAD08A6004C97AF /* HolidayCell.swift */; };
 		80F75BB32BAD14B0004C97AF /* HolidayInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F75BB22BAD14B0004C97AF /* HolidayInfoVC.swift */; };
@@ -68,6 +76,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		800BA7502BB24798006A46C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		800BA7542BB29427006A46C3 /* CurrencyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListVC.swift; sourceTree = "<group>"; };
+		800BA7562BB2943A006A46C3 /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
+		800BA7592BB29515006A46C3 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		801E1F222BAA21AA0081ECAB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		801E1F242BAA2CEA0081ECAB /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		801E1F272BAA3B240081ECAB /* HolidaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysVC.swift; sourceTree = "<group>"; };
@@ -103,12 +115,16 @@
 		8099047A2BA9A3A30010334C /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		8099047B2BA9A3A30010334C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8099047C2BA9A3A30010334C /* Font + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extention.swift"; sourceTree = "<group>"; };
+		80AB8E822BB1967300851682 /* HolidayCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCost.swift; sourceTree = "<group>"; };
+		80AB8E872BB1985F00851682 /* HolidayCostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCostCell.swift; sourceTree = "<group>"; };
+		80DB41E82BB346A60081CFCE /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		80DB41EB2BB34D8B0081CFCE /* CurrencyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfoVC.swift; sourceTree = "<group>"; };
+		80DB41ED2BB34D960081CFCE /* CurrencyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfoView.swift; sourceTree = "<group>"; };
 		80F75B942BACEE1A004C97AF /* AddHolidayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHolidayVC.swift; sourceTree = "<group>"; };
 		80F75B962BACEE26004C97AF /* AddHolidayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHolidayView.swift; sourceTree = "<group>"; };
 		80F75B982BACF6F9004C97AF /* TopRightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRightButton.swift; sourceTree = "<group>"; };
 		80F75B9B2BAD039C004C97AF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		80F75BA62BAD0506004C97AF /* Holiday+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Holiday+CoreDataClass.swift"; sourceTree = "<group>"; };
-		80F75BA72BAD0506004C97AF /* Holiday+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Holiday+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		80F75BA72BAD0506004C97AF /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		80F75BAB2BAD0734004C97AF /* ModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalVC.swift; sourceTree = "<group>"; };
 		80F75BAE2BAD08A6004C97AF /* HolidayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCell.swift; sourceTree = "<group>"; };
 		80F75BB22BAD14B0004C97AF /* HolidayInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayInfoVC.swift; sourceTree = "<group>"; };
@@ -128,6 +144,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800BA7522BB247AA006A46C3 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				800BA7502BB24798006A46C3 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		800BA7532BB29408006A46C3 /* CurrencyVC */ = {
+			isa = PBXGroup;
+			children = (
+				800BA7582BB29503006A46C3 /* CurrencyCell */,
+				800BA7542BB29427006A46C3 /* CurrencyListVC.swift */,
+				800BA7562BB2943A006A46C3 /* CurrencyListView.swift */,
+			);
+			path = CurrencyVC;
+			sourceTree = "<group>";
+		};
+		800BA7582BB29503006A46C3 /* CurrencyCell */ = {
+			isa = PBXGroup;
+			children = (
+				800BA7592BB29515006A46C3 /* CurrencyCell.swift */,
+			);
+			path = CurrencyCell;
+			sourceTree = "<group>";
+		};
 		801E1F262BAA3B140081ECAB /* Holidays */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +219,9 @@
 		809016712BAE22C900942AE7 /* Calculations */ = {
 			isa = PBXGroup;
 			children = (
+				80DB41EA2BB34D770081CFCE /* CurrencyInfoVC */,
+				800BA7532BB29408006A46C3 /* CurrencyVC */,
+				80AB8E862BB1984800851682 /* HolidayCostCell */,
 				8090167A2BAE3B1400942AE7 /* CalculationsVC */,
 				809016792BAE3B0400942AE7 /* CalculationResultVC */,
 			);
@@ -278,6 +323,7 @@
 				8099047A2BA9A3A30010334C /* Date + Extension.swift */,
 				8099047B2BA9A3A30010334C /* TabBarController.swift */,
 				8099047C2BA9A3A30010334C /* Font + Extention.swift */,
+				80DB41E82BB346A60081CFCE /* String + Extension.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -297,6 +343,7 @@
 		8099047D2BA9A3AA0010334C /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				800BA7522BB247AA006A46C3 /* NetworkManager */,
 				8099048E2BA9A4430010334C /* Flow */,
 				809904712BA9A3A20010334C /* SupportFiles */,
 			);
@@ -313,6 +360,23 @@
 				801E1F2E2BAA4C790081ECAB /* SettingsVC */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		80AB8E862BB1984800851682 /* HolidayCostCell */ = {
+			isa = PBXGroup;
+			children = (
+				80AB8E872BB1985F00851682 /* HolidayCostCell.swift */,
+			);
+			path = HolidayCostCell;
+			sourceTree = "<group>";
+		};
+		80DB41EA2BB34D770081CFCE /* CurrencyInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				80DB41EB2BB34D8B0081CFCE /* CurrencyInfoVC.swift */,
+				80DB41ED2BB34D960081CFCE /* CurrencyInfoView.swift */,
+			);
+			path = CurrencyInfoVC;
 			sourceTree = "<group>";
 		};
 		80F75B922BACEDFC004C97AF /* HolidaysVC */ = {
@@ -348,8 +412,8 @@
 		80F75B9D2BAD03A5004C97AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				80F75BA62BAD0506004C97AF /* Holiday+CoreDataClass.swift */,
-				80F75BA72BAD0506004C97AF /* Holiday+CoreDataProperties.swift */,
+				80AB8E822BB1967300851682 /* HolidayCost.swift */,
+				80F75BA72BAD0506004C97AF /* Holiday.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -465,19 +529,24 @@
 				801E1F2A2BAA3B2B0081ECAB /* HolidaysView.swift in Sources */,
 				80F75BB32BAD14B0004C97AF /* HolidayInfoVC.swift in Sources */,
 				801E1F252BAA2CEA0081ECAB /* OnboardingVC.swift in Sources */,
+				80AB8E882BB1985F00851682 /* HolidayCostCell.swift in Sources */,
 				80F75BAC2BAD0734004C97AF /* ModalVC.swift in Sources */,
 				809904842BA9A3CB0010334C /* CustomPageControlView.swift in Sources */,
+				80AB8E842BB1967300851682 /* HolidayCost.swift in Sources */,
+				800BA7552BB29427006A46C3 /* CurrencyListVC.swift in Sources */,
 				809904812BA9A3C50010334C /* MyColors.swift in Sources */,
+				800BA7572BB2943A006A46C3 /* CurrencyListView.swift in Sources */,
 				809904802BA9A3C50010334C /* Font + Extention.swift in Sources */,
+				80DB41EC2BB34D8B0081CFCE /* CurrencyInfoVC.swift in Sources */,
 				809904832BA9A3C50010334C /* TabBarController.swift in Sources */,
 				801E1F282BAA3B240081ECAB /* HolidaysVC.swift in Sources */,
 				809016702BAE185F00942AE7 /* EditCardView.swift in Sources */,
 				809016752BAE234A00942AE7 /* CalculationsView.swift in Sources */,
 				8090167E2BAE3B4100942AE7 /* CalculationResultView.swift in Sources */,
-				80F75BA92BAD0506004C97AF /* Holiday+CoreDataProperties.swift in Sources */,
+				80F75BA92BAD0506004C97AF /* Holiday.swift in Sources */,
 				8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */,
+				800BA75A2BB29515006A46C3 /* CurrencyCell.swift in Sources */,
 				809904882BA9A3DC0010334C /* OnboardingData.swift in Sources */,
-				80F75BA82BAD0506004C97AF /* Holiday+CoreDataClass.swift in Sources */,
 				801E1F2D2BAA3BC30081ECAB /* TotalInfoView.swift in Sources */,
 				801E1F302BAA4CBC0081ECAB /* SettingsVC.swift in Sources */,
 				809904522BA983480010334C /* AppDelegate.swift in Sources */,
@@ -491,13 +560,16 @@
 				809904822BA9A3C50010334C /* Double + Extension .swift in Sources */,
 				809016782BAE289B00942AE7 /* CurrencyPairView.swift in Sources */,
 				8090166E2BAE173400942AE7 /* EditCardsVC.swift in Sources */,
+				80DB41EE2BB34D960081CFCE /* CurrencyInfoView.swift in Sources */,
 				801E1F352BAA4CFD0081ECAB /* SettingsButtonView.swift in Sources */,
 				8099047F2BA9A3C50010334C /* Date + Extension.swift in Sources */,
 				8099048D2BA9A3E10010334C /* SplashView.swift in Sources */,
 				8090167C2BAE3B3400942AE7 /* CalculationResultVC.swift in Sources */,
+				80DB41E92BB346A60081CFCE /* String + Extension.swift in Sources */,
 				801E1F232BAA21AA0081ECAB /* OnboardingView.swift in Sources */,
 				809904852BA9A3CB0010334C /* CustomTextFieldView.swift in Sources */,
 				80F75B9C2BAD039C004C97AF /* CoreDataManager.swift in Sources */,
+				800BA7512BB24798006A46C3 /* NetworkManager.swift in Sources */,
 				80F75B952BACEE1A004C97AF /* AddHolidayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

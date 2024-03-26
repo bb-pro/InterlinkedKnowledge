@@ -6,4 +6,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="purchases" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="HolidayCost" representedClassName="HolidayCost" isAbstract="YES" syncable="YES">
+        <attribute name="cost" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
 </model>

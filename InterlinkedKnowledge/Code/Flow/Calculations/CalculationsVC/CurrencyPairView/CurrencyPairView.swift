@@ -37,6 +37,9 @@ final class CurrencyPairView: UIView {
     private lazy var currencyPairImgView: UIImageView = {
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFit
+        imgView.snp.makeConstraints { make in
+            make.height.width.equalTo(42)
+        }
         return imgView
     }()
     

@@ -9,7 +9,10 @@
 import Foundation
 import CoreData
 
+@objc(HolidayCost)
+public class HolidayCost: NSManagedObject {
 
+}
 
 extension HolidayCost {
 
@@ -17,7 +20,7 @@ extension HolidayCost {
         return NSFetchRequest<HolidayCost>(entityName: "HolidayCost")
     }
 
-    @NSManaged public var name: NSObject?
+    @NSManaged public var name: String?
     @NSManaged public var cost: Int32
 
 }
