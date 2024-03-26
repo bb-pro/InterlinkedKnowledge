@@ -116,6 +116,26 @@ final class CalculationsView: UIView {
         return stackView
     }()
     
+    private(set) lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorInset = .zero
+        tableView.separatorStyle = .none
+        tableView.register(HolidayCell.self, forCellReuseIdentifier: HolidayCell.id)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        return tableView   
+    }()
+    
+    private(set) lazy var centerLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.font = .customSFFont(.regular, size: 17)
+        lbl.textColor = MyColors.secondaryText.color
+        lbl.text = "Your saved calculations\nwill be stored here"
+        lbl.numberOfLines = 0
+        lbl.textAlignment = .center
+        return lbl
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpViews()

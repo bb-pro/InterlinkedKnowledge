@@ -9,6 +9,10 @@
 import Foundation
 import CoreData
 
+@objc(Holiday)
+public class Holiday: NSManagedObject {
+
+}
 
 extension Holiday {
 
