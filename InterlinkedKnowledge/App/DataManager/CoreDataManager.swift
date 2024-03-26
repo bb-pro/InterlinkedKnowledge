@@ -103,6 +103,23 @@ public final class CoreDataManager: NSObject {
         return []
     }
     
+    public func deleteAllEntities<T: NSManagedObject>(_ entityType: T.Type) {
+            let fetchRequest = NSFetchRequest<T>(entityName: String(describing: entityType))
+            
+            do {
+                if let fetchedObjects = try context?.fetch(fetchRequest) {
+                    for object in fetchedObjects {
+                        context?.delete(object)
+                    }
+                    appDelegate?.saveContext()
+                } else {
+                    print("Failed to fetch objects")
+                }
+            } catch {
+                print("Error during deleteAllEntities: \(error)")
+            }
+        }
+    
 }
 
 

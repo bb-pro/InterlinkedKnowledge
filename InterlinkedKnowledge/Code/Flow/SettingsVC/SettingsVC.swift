@@ -43,6 +43,18 @@ final class SettingsVC: BaseViewController {
     }
     
     @objc func resetPressed() {
+        let alertController = UIAlertController(title: "Reset Confirmation", message: "Are you sure you want to reset?", preferredStyle: .alert)
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let resetAction = UIAlertAction(title: "Reset", style: .destructive) { _ in
+            CoreDataManager.shared.deleteAllEntities(Holiday.self)
+            CoreDataManager.shared.deleteAllEntities(HolidayCost.self)
+        }
+        alertController.addAction(resetAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
+
 }

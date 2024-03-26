@@ -18,7 +18,7 @@ final class CurrencyListView: UIView {
         let label = UILabel()
         label.font = .customSFProFont(.semibold, size: 17)
         label.textColor = MyColors.black.color
-        label.text = "Result"
+        label.text = "Currency pairs"
         return label
     }()
     
