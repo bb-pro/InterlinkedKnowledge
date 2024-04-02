@@ -44,6 +44,8 @@ final class SettingsView: UIView {
                               title: "Usage Policy",
                               textColor: MyColors.black.color,
                               backColor: MyColors.bgSecond.color))
+        rateView.iconImageView.image = UIImage(systemName: "list.bullet.clipboard")
+        rateView.iconImageView.tintColor = .black
         return rateView
     }()
     

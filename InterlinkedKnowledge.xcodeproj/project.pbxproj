@@ -46,6 +46,7 @@
 		8099048C2BA9A3E10010334C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099046A2BA9A3960010334C /* SplashVC.swift */; };
 		8099048D2BA9A3E10010334C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099046B2BA9A3960010334C /* SplashView.swift */; };
 		809904952BA9A6180010334C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 809904942BA9A6180010334C /* SnapKit */; };
+		80A134A52BBC98160076CE22 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A134A42BBC98160076CE22 /* WebViewController.swift */; };
 		80AB8E842BB1967300851682 /* HolidayCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB8E822BB1967300851682 /* HolidayCost.swift */; };
 		80AB8E882BB1985F00851682 /* HolidayCostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB8E872BB1985F00851682 /* HolidayCostCell.swift */; };
 		80DB41E92BB346A60081CFCE /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB41E82BB346A60081CFCE /* String + Extension.swift */; };
@@ -115,6 +116,7 @@
 		8099047A2BA9A3A30010334C /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		8099047B2BA9A3A30010334C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8099047C2BA9A3A30010334C /* Font + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extention.swift"; sourceTree = "<group>"; };
+		80A134A42BBC98160076CE22 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		80AB8E822BB1967300851682 /* HolidayCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCost.swift; sourceTree = "<group>"; };
 		80AB8E872BB1985F00851682 /* HolidayCostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCostCell.swift; sourceTree = "<group>"; };
 		80DB41E82BB346A60081CFCE /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				801E1F332BAA4CE00081ECAB /* SettingsButton */,
 				801E1F2F2BAA4CBC0081ECAB /* SettingsVC.swift */,
 				801E1F312BAA4CCC0081ECAB /* SettingsView.swift */,
+				80A134A42BBC98160076CE22 /* WebViewController.swift */,
 			);
 			path = SettingsVC;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				80AB8E842BB1967300851682 /* HolidayCost.swift in Sources */,
 				800BA7552BB29427006A46C3 /* CurrencyListVC.swift in Sources */,
 				809904812BA9A3C50010334C /* MyColors.swift in Sources */,
+				80A134A52BBC98160076CE22 /* WebViewController.swift in Sources */,
 				800BA7572BB2943A006A46C3 /* CurrencyListView.swift in Sources */,
 				809904802BA9A3C50010334C /* Font + Extention.swift in Sources */,
 				80DB41EC2BB34D8B0081CFCE /* CurrencyInfoVC.swift in Sources */,

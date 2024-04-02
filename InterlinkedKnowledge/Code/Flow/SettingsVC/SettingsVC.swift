@@ -39,7 +39,8 @@ final class SettingsVC: BaseViewController {
     }
     
     @objc func usageProfilePressed() {
-        
+        let webVC = WebViewController()
+        present(webVC, animated: true)
     }
     
     @objc func resetPressed() {
